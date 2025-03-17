@@ -1,1 +1,1 @@
-# djangoweb
+Django project
