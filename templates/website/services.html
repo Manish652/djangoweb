@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Services Page
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-5 text-light animate__animated animate__fadeInUp">Our Services</h1>
+
+<div class="container">
+    <p class="text-light text-center fs-5 mb-5">
+        We offer a diverse range of services to meet the demands of modern businesses, focusing on innovation, efficiency, and security.
+    </p>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Web Development -->
+        <div class="col">
+            <div class="card h-100 bg-dark text-light shadow border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title fw-bold">Web Development</h5>
+                    <p class="card-text">
+                        We build responsive and visually appealing websites that drive engagement and deliver excellent user experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- App Development -->
+        <div class="col">
+            <div class="card h-100 bg-dark text-light shadow border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-mobile-alt fa-3x text-success mb-3"></i>
+                    <h5 class="card-title fw-bold">App Development</h5>
+                    <p class="card-text">
+                        From concept to launch, we create intuitive and feature-rich mobile applications for both iOS and Android platforms.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cybersecurity Solutions -->
+        <div class="col">
+            <div class="card h-100 bg-dark text-light shadow border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-shield-alt fa-3x text-danger mb-3"></i>
+                    <h5 class="card-title fw-bold">Cybersecurity Solutions</h5>
+                    <p class="card-text">
+                        Safeguard your digital assets with our cutting-edge cybersecurity services, including network security and penetration testing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Section -->
+    <div class="mt-5">
+        <h2 class="text-center text-light mb-4">Why Choose Us?</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="p-4 bg-secondary rounded shadow-sm">
+                    <i class="fas fa-lightbulb fa-2x text-warning mb-2"></i>
+                    <h6 class="fw-bold text-light">Innovative Solutions</h6>
+                    <p class="text-light small">We bring creativity and innovation to every project we undertake.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-secondary rounded shadow-sm">
+                    <i class="fas fa-cogs fa-2x text-info mb-2"></i>
+                    <h6 class="fw-bold text-light">Expert Team</h6>
+                    <p class="text-light small">Our team of experts ensures top-quality results tailored to your needs.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-secondary rounded shadow-sm">
+                    <i class="fas fa-clock fa-2x text-success mb-2"></i>
+                    <h6 class="fw-bold text-light">Timely Delivery</h6>
+                    <p class="text-light small">We value your time and always meet deadlines efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Recipe-Application
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+
+    <!-- Recipe Form -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <form class="bg-light shadow-lg p-4 rounded-lg" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h3 class="text-center mb-4 text-bg-dark">Add a New Recipe</h3>
+                <hr>
+                <!-- Recipe Name -->
+                <div class="form-group mb-3">
+                    <label for="receipe_name" class="font-weight-bold">Recipe Name</label>
+                    <input type="text" name="receipe_name" id="receipe_name" required class="form-control" placeholder="Enter recipe name">
+                </div>
+
+                <!-- Recipe Description -->
+                <div class="form-group mb-3">
+                    <label for="receipe_description" class="font-weight-bold">Recipe Description</label>
+                    <textarea name="receipe_description" id="receipe_description" class="form-control" rows="4" placeholder="Describe the recipe"></textarea>
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" required id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions</label>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="form-group mb-4">
+                    <label for="receipe_image" class="font-weight-bold">Upload Recipe Image</label>
+                    <input type="file" name="receipe_image" class="form-control-file" id="receipe_image">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block">Submit Recipe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Recipe List -->
+    <div class="mt-5">
+        <h4 class="text-center mb-4">Recipe List</h4>
+        <table class="table table-striped table-bordered table-hover shadow-sm rounded text-primary">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Recipe Name</th>
+                    <th scope="col">Recipe Description</th>
+                    <th scope="col">Recipe Image</th>
+                    <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for receipe in receipes %}
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ receipe.receipe_name }}</td>
+                    <td>{{ receipe.receipe_description }}</td>
+                    <td>
+                      {% if receipe.receipe_image %}
+                      <img src="{{ receipe.receipe_image.url }}" alt="{{ receipe.receipe_name }}" width="200">
+                  {% else %}
+                      <img src="https://i.pinimg.com/474x/2b/64/e1/2b64e15ac11687bb3074b9f7abc87edd.jpg" alt="Fallback image" width="100">
+                  {% endif %}
+                  
+                    </td>
+                    <td>
+                        <a href="/foody/delete-recepies/{{receipe.id}}" class="btn btn-danger">Delete</a>
+                        <a href="/foody/update-recepies/{{receipe.id}}" class="btn btn-success">update</a>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

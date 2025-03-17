@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Recipe-Application
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+
+    <!-- Recipe Form -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <form class="bg-light shadow-lg p-4 rounded-lg" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h3 class="text-center mb-4">update Recipe</h3>
+                <hr>
+                <!-- Recipe Name -->
+                <div class="form-group mb-3">
+                    <label for="receipe_name" class="font-weight-bold">Recipe Name</label>
+                    <input type="text" name="receipe_name" value="{{receipe.receipe_name}}" id="receipe_name" required class="form-control" placeholder="Enter recipe name">
+                </div>
+
+                <!-- Recipe Description -->
+                <div class="form-group mb-3">
+                    <label for="receipe_description" class="font-weight-bold">Recipe Description</label>
+                    <textarea name="receipe_description" id="receipe_description" class="form-control" rows="4" placeholder="Describe the recipe">{{receipe.receipe_description}}</textarea>
+                </div>
+
+                <!-- Terms Checkbox -->
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" required id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">I agree to the terms and conditions</label>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="form-group mb-4">
+                    <label for="receipe_image" class="font-weight-bold">Upload Recipe Image</label>
+                    <input type="file" name="receipe_image" class="form-control-file" id="receipe_image">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block">update Recipe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Recipe List -->
+
+</div>
+{% endblock %}

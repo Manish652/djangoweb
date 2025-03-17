@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Contact Us
+{% endblock %}
+
+{% block content %}
+<section class="contact-section py-5">
+    <div class="container">
+        <h1 class="text-center mb-4 text-primary animate__animated animate__fadeInUp">Get in Touch</h1>
+        <p class="text-center text-muted mb-5">
+            Have questions or need assistance? We'd love to hear from you! Fill out the form below, and we'll get back to you promptly.
+        </p>
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-6 mb-4">
+                <div class="contact-info p-4 shadow-sm rounded bg-info">
+                    <h4 class="fw-bold mb-3 text-dark">Contact Information</h4>
+                    <p class="text-muted"><i class="fas fa-envelope me-2 text-primary"></i> support@yourwebsite.com</p>
+                    <p class="text-muted"><i class="fas fa-phone-alt me-2 text-primary"></i> +1 234 567 890</p>
+                    <p class="text-muted"><i class="fas fa-map-marker-alt me-2 text-primary"></i> 123 Main Street, City, Country</p>
+                </div>
+            </div>
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <form action="#" method="post" class="p-4 shadow-sm rounded bg-info">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

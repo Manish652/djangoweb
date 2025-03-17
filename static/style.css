@@ -1,0 +1,253 @@
+/* Define Theme Variables */
+/* Light Mode */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --box-shadow-light: rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: rgba(0, 0, 0, 0.2);
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --link-hover-color: #ff6347;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --primary-color: #ffbb33;
+    --secondary-color: #999999;
+    --box-shadow-light: rgba(0, 0, 0, 0.5);
+    --box-shadow-dark: rgba(255, 255, 255, 0.5);
+    --light-color: #1a1a1a;
+    --dark-color: #ffffff;
+    --link-hover-color: #ff6347;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-toggle i {
+    font-size: 1.2rem;
+}
+
+.btn-toggle:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+/* Header Section */
+.custom-header {
+    background: linear-gradient(to bottom right, var(--secondary-color), #333);
+    color: var(--text-color);
+    padding: 50px 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--box-shadow-dark);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.custom-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.custom-header p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Features Section */
+.features-section {
+    background: linear-gradient(135deg, #5c0880, #053b5d);
+    color: #eaeaea;
+    padding: 60px 20px;
+    border-radius: 10px;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    color: #eaeaea;
+    padding: 30px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature-box i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-box h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+button, .btn {
+    font-size: 1rem;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--dark-color);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Footer Section */
+.custom-footer {
+    background: #1c1c1c;
+    color: #bbb;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid var(--secondary-color);
+}
+
+.custom-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-footer a:hover {
+    color: var(--link-hover-color);
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(to bottom, #4b0c28, #550b46);
+    padding: 50px 0;
+}
+
+.contact-info {
+    border-left: 5px solid #007bff;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.contact-section .form-control {
+    border: 1px solid #3a7cbe;
+    border-radius: 10px;
+}
+
+.contact-section button {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-section h2 {
+        font-size: 2rem;
+    }
+
+    .feature-box {
+        padding: 20px;
+    }
+
+    button, .btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+th{
+    color: #007bff;
+}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+About Page
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4 text-primary animate__animated animate__fadeInUp">About Us</h1>
+
+<div class="container">
+    <p class="text-light fs-5 text-center">
+        Welcome to our platform! We are dedicated to delivering exceptional solutions in web development, app development, and cybersecurity. Our team strives to exceed your expectations by offering cutting-edge, reliable, and user-focused services.
+    </p>
+    
+    <div class="mt-4">
+        <ul class="list-group">
+            <li class="list-group-item bg-dark text-light">
+                <span class="fw-bold text-warning">Who We Are:</span> A passionate team of developers, designers, and security experts driven to create impactful solutions.
+            </li>
+            <li class="list-group-item bg-dark text-light">
+                <span class="fw-bold text-warning">What We Do:</span> Provide tailored services in web development, mobile app creation, and cybersecurity to meet diverse business needs.
+            </li>
+            <li class="list-group-item bg-dark text-light">
+                <span class="fw-bold text-warning">Why Choose Us:</span> We prioritize innovation, quality, and customer satisfaction to ensure your success.
+            </li>
+        </ul>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="#services" class="btn btn-warning btn-lg me-2"><i class="fas fa-cogs"></i> Explore Services</a>
+        <a href="#contact" class="btn btn-outline-primary btn-lg"><i class="fas fa-envelope"></i> Contact Us</a>
+    </div>
+</div>
+{% endblock %}

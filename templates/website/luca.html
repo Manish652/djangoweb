@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Lucario Page
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-5 text-light animate__animated animate__fadeInUp">All About Lucario</h1>
+
+<div class="container">
+    <p class="text-light text-center fs-5 mb-5">
+        Discover the powerful and unique Pokémon Lucario, known for its Fighting and Steel types, its special abilities, and its connection with aura.
+    </p>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Lucario's Origins -->
+        <div class="col">
+            <div class="card h-100 bg-dark text-light shadow border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-paw fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title fw-bold">Origins</h5>
+                    <p class="card-text">
+                        Lucario was introduced in Generation IV of the Pokémon series. It has become one of the most iconic Pokémon due to its strength and mystique.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lucario's Abilities -->
+        <div class="col">
+            <div class="card h-100 bg-dark text-light shadow border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-bolt fa-3x text-success mb-3"></i>
+                    <h5 class="card-title fw-bold">Aura Abilities</h5>
+                    <p class="card-text">
+                        Lucario can sense and manipulate aura, the energy of all living things. This makes it a formidable opponent in battle and a strategic asset.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lucario in Combat -->
+        <div class="col">
+            <div class="card h-100 bg-dark text-light shadow border-0">
+                <div class="card-body text-center">
+                    <i class="fas fa-fist-raised fa-3x text-danger mb-3"></i>
+                    <h5 class="card-title fw-bold">Combat Skills</h5>
+                    <p class="card-text">
+                        Lucario is known for its fighting prowess and powerful moves like Aura Sphere, Close Combat, and Bone Rush.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Section -->
+    <div class="mt-5">
+        <h2 class="text-center text-light mb-4">Why Lucario?</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="p-4 bg-secondary rounded shadow-sm">
+                    <i class="fas fa-lightbulb fa-2x text-warning mb-2"></i>
+                    <h6 class="fw-bold text-light">Strong and Versatile</h6>
+                    <p class="text-light small">Lucario's unique combination of Fighting and Steel types makes it one of the most versatile Pokémon in battles.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-secondary rounded shadow-sm">
+                    <i class="fas fa-cogs fa-2x text-info mb-2"></i>
+                    <h6 class="fw-bold text-light">Battle Ready</h6>
+                    <p class="text-light small">Lucario is a master of hand-to-hand combat and can use its aura to predict the moves of its opponents.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-secondary rounded shadow-sm">
+                    <i class="fas fa-heart fa-2x text-danger mb-2"></i>
+                    <h6 class="fw-bold text-light">Loyal Companion</h6>
+                    <p class="text-light small">Lucario's bond with its trainer is incredibly strong, often seen as a true companion in battle and life.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

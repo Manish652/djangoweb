@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Welcome to My Django App
+{% endblock %}
+
+{% block content %}
+<div class="text-center my-5">
+    <h1 class="display-4 text-primary fw-bold animate__animated animate__fadeInUp">Welcome to My Django App</h1>
+    <p class="lead text-secondary animate__animated animate__fadeInUp animate__delay-1s">
+        Your one-stop solution for dynamic web applications and robust services.
+    </p>
+</div>
+
+<!-- Features Section -->
+<section class="features-section py-5 " id="new">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold text-primary">Why Choose Us?</h2>
+        <div class="row g-4 text-center">
+            <div class="col-md-4">
+                <div class="feature-box p-4 shadow-sm rounded ">
+                    <i class="fas fa-lightbulb fa-3x text-warning mb-3"></i>
+                    <h5 class="fw-bold">Innovative Design</h5>
+                    <p class="text-muted">We craft unique, sleek, and modern designs to bring your ideas to life.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box p-4 shadow-sm rounded ">
+                    <i class="fas fa-laptop-code fa-3x text-success mb-3"></i>
+                    <h5 class="fw-bold">Clean Code</h5>
+                    <p class="text-muted">Our codebase is efficient, well-structured, and easy to maintain.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box p-4 shadow-sm rounded ">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h5 class="fw-bold">Secure Solutions</h5>
+                    <p class="text-muted">We prioritize security with industry-standard practices for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="#services" class="btn btn-primary btn-lg me-2"><i class="fas fa-cogs"></i> Explore Services</a>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg"><i class="fas fa-envelope"></i> Contact Us</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Data Table Section -->
+{% comment %} <section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 text-secondary">User Details</h2>
+        <table class="table table-striped shadow-sm">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Eligibility</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for person in peoples %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.age }}</td>
+                    <td>
+                        {% if person.age >= 18 %}
+                        <span class="badge bg-success">Eligible</span>
+                        {% else %}
+                        <span class="badge bg-danger">Not Eligible</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section> {% endcomment %}
+
+<!-- Call-to-Action -->
+<div class="text-center py-5">
+    <a href="/services" class="btn btn-primary btn-lg me-3">
+        <i class="fas fa-cogs"></i> Explore Services
+    </a>
+    <a href="/about" class="btn btn-secondary btn-lg me-3">
+        <i class="fas fa-info-circle"></i> Learn More
+    </a>
+    <a href="/contact" class="btn btn-success btn-lg">
+        <i class="fas fa-envelope"></i> Get in Touch
+    </a>
+</div>
+{% endblock %}
